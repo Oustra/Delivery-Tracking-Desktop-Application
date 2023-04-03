@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="631.0" prefWidth="1048.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.fstt.trackingl.HomeUserController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="631.0" prefWidth="206.0" style="-fx-background-color: #ffc244;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="3.0" layoutY="45.0" prefHeight="94.0" prefWidth="200.0" style="-fx-background-color: #00a082; -fx-background-radius: 50;">
+               <children>
+                  <Label layoutX="65.0" layoutY="14.0" text="HELLO" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="24.0" />
+                     </font></Label>
+                  <Label layoutX="69.0" layoutY="48.0" text="USER" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="27.0" />
+                     </font></Label>
+               </children></AnchorPane>
+            <VBox layoutX="-1.0" layoutY="175.0" prefHeight="202.0" prefWidth="210.0">
+               <children>
+                  <Button fx:id="FoodBtn" mnemonicParsing="false" onAction="#switchForm" prefHeight="51.0" prefWidth="217.0" style="-fx-background-color: WHite;">
+                     <graphic>
+                        <Label prefHeight="34.0" prefWidth="216.0" text=" FOOD" textFill="#00a082">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../Pics/Pin.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Century Gothic Bold" size="21.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="PurchaseBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="51.0" prefWidth="209.0" style="-fx-background-color: #ffc244;">
+                     <graphic>
+                        <Label prefHeight="34.0" prefWidth="216.0" text=" Purchase" textFill="#00a082">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../Pics/Pin.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Century Gothic Bold" size="21.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="DeliveryBtn" layoutX="10.0" layoutY="61.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="51.0" prefWidth="209.0" style="-fx-background-color: #ffc244;">
+                     <graphic>
+                        <Label prefHeight="34.0" prefWidth="216.0" text=" Delivery" textFill="#00a082">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../Pics/Pin.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Century Gothic Bold" size="21.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+         </children></AnchorPane>
+      <AnchorPane layoutX="206.0" prefHeight="631.0" prefWidth="840.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="206.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="LogOut" layoutX="730.0" layoutY="3.0" mnemonicParsing="false" onAction="#LogOut" prefHeight="24.0" prefWidth="51.0">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Pics/logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="Exit" layoutX="786.0" layoutY="3.0" mnemonicParsing="false" onAction="#ExitFun" prefHeight="24.0" prefWidth="51.0">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Pics/X.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <AnchorPane fx:id="FoodView" layoutX="8.0" layoutY="30.0" prefHeight="645.0" prefWidth="830.0">
+               <children>
+                  <TableView fx:id="TableProdview" layoutX="14.0" layoutY="101.0" onMouseClicked="#Product_Select" prefHeight="512.0" prefWidth="551.0">
+                    <columns>
+                      <TableColumn fx:id="NomProd" prefWidth="194.0" text="Product Name" />
+                      <TableColumn fx:id="BrandProd" prefWidth="178.79998779296875" text="Brand" />
+                        <TableColumn fx:id="PriceProdCol" prefWidth="176.8000366210938" text="Price" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="582.0" layoutY="106.0" text="Brand">
+                     <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="BrandTxt" editable="false" layoutX="662.0" layoutY="105.0" />
+                  <Label layoutX="581.0" layoutY="142.0" text="Product">
+                     <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="NameTxt" editable="false" layoutX="662.0" layoutY="141.0" />
+                  <Label layoutX="582.0" layoutY="179.0" text="Quantity">
+                     <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Spinner fx:id="Quantity" layoutX="662.0" layoutY="178.0" />
+                  <Button fx:id="Add" layoutX="662.0" layoutY="228.0" mnemonicParsing="false" onAction="#onAddCmdButtonClick" prefHeight="32.0" prefWidth="74.0" text="ADD">
+                     <font>
+                        <Font name="Century Gothic Bold" size="19.0" />
+                     </font>
+                  </Button>
+                  <AnchorPane layoutX="14.0" layoutY="34.0" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: #00a082; -fx-background-radius: 50;">
+                     <children>
+                        <Label layoutX="30.0" layoutY="10.0" text="Products List" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="PurchaseView" layoutX="8.0" layoutY="30.0" prefHeight="645.0" prefWidth="830.0" visible="false">
+               <children>
+                  <TableView fx:id="TableCmdview" layoutX="14.0" layoutY="108.0" prefHeight="338.0" prefWidth="803.0">
+                     <columns>
+                        <TableColumn fx:id="BrandCol" prefWidth="166.60000610351562" text="Brand" />
+                        <TableColumn fx:id="ProdCol" prefWidth="196.60006713867188" text="ProductName" />
+                        <TableColumn fx:id="QuantityCol" prefWidth="131.39996337890625" text="Quantity" />
+                        <TableColumn fx:id="PriceCmdCol" prefWidth="112.60003662109375" text="Price" />
+                        <TableColumn fx:id="DateCol" prefWidth="194.5999755859375" text="Date commande" />
+                     </columns>
+                  </TableView>
+                  <AnchorPane layoutX="300.0" layoutY="459.0" prefHeight="157.0" prefWidth="230.0" style="-fx-background-color: #00a082; -fx-background-radius: 50;">
+                     <children>
+                        <Label fx:id="TotalPriceField" layoutX="134.0" layoutY="33.0" prefHeight="32.0" prefWidth="96.0" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="Rcp1" layoutX="30.0" layoutY="89.0" mnemonicParsing="false" onAction="#Clear" prefHeight="46.0" prefWidth="74.0" style="-fx-background-radius: 50;" text="Clr">
+                           <font>
+                              <Font name="Century Gothic Bold" size="19.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pay1" layoutX="130.0" layoutY="89.0" mnemonicParsing="false" onAction="#Pay" prefHeight="46.0" prefWidth="74.0" style="-fx-background-radius: 50;" text="Pay">
+                           <font>
+                              <Font name="Century Gothic Bold" size="19.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="20.0" layoutY="33.0" text="Total DH: " textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="539.0" layoutY="495.0" text="Adresse:">
+                     <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="AdresseTxt" layoutX="623.0" layoutY="495.0" prefHeight="86.0" prefWidth="193.0" promptText="Entre your Adresse">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </TextArea>
+                  <AnchorPane layoutX="14.0" layoutY="37.0" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: #00a082; -fx-background-radius: 50;">
+                     <children>
+                        <Label layoutX="70.0" layoutY="10.0" text="CART" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="DeliveryView" layoutX="8.0" layoutY="30.0" prefHeight="645.0" prefWidth="830.0" visible="false">
+               <children>
+                  <TableView fx:id="TableDlvview" layoutX="14.0" layoutY="101.0" onMouseClicked="#Delivery_Select" prefHeight="512.0" prefWidth="551.0">
+                     <columns>
+                        <TableColumn fx:id="AdressCol" prefWidth="162.0" text="Delivery Adresse" />
+                        <TableColumn fx:id="DelivererCol" prefWidth="121.0" text="Deliverer" />
+                        <TableColumn fx:id="Telecol" prefWidth="143.0" text="Telephone" />
+                        <TableColumn fx:id="StatusCol" prefWidth="122.0" text="Delivery Status" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="580.0" layoutY="106.0" text="Deliverer">
+                     <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="DelivererTxt" editable="false" layoutX="662.0" layoutY="105.0" />
+                  <Label layoutX="581.0" layoutY="142.0" text="Status">
+                     <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="StatusTxt" editable="false" layoutX="662.0" layoutY="141.0" />
+                  <Button fx:id="TrackBtn" layoutX="681.0" layoutY="239.0" mnemonicParsing="false" onAction="#OnDeliberedClick" prefHeight="38.0" prefWidth="131.0" text="Delivered">
+                     <font>
+                        <Font name="Century Gothic Bold" size="19.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="TeleTxt" editable="false" layoutX="662.0" layoutY="180.0" />
+                  <Label layoutX="581.0" layoutY="181.0" text="Teleph">
+                     <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="14.0" layoutY="37.0" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: #00a082; -fx-background-radius: 50;">
+                     <children>
+                        <Label layoutX="28.0" layoutY="10.0" text="Delivery Stat" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
